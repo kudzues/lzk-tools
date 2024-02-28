@@ -17,12 +17,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'
+          registry-url: 'https://registry.npmjs.org/'
 
       - name: Install dependencies
-        run: npm install
+        run: npm install -g pnpm && pnpm install
 
       - name: Build Electron app for Windows
-        run: npm run build:win
+        run: pnpm run build:win
 
       - name: Create Release
         id: create_release
