@@ -233,7 +233,7 @@
             </div>
             <div class="flex flex-col gap-2 items-center mt-2 mb-2">
               <div class="w-full">
-                <span class="text-base font-medium">相对标准不确定度：</span>
+                <span class="text-base font-medium">移液器相对标准不确定度：</span>
               </div>
               <div class="flex items-center w-full">
                 <input
@@ -523,6 +523,7 @@ export default {
         result = result.div(this.rongQiOption1)
 
         this.step4.result1 = result.isFinite() ? result.toFixed(6) : '参数错误'
+        this.step5.step2.rongLiangPingBuQueDingDu = this.step4.result1
       }
     },
     calculate5() {
@@ -575,6 +576,39 @@ export default {
 
         let result = b1.pow(2).plus(b2.pow(2)).sqrt()
         this.step5.step4.result = result.isFinite() ? result.toFixed(5) : '参数错误'
+      }
+    },
+    changeRongQi() {
+      this.step2.yunCha = BigNumber(this.rongQiOption)
+      switch (this.rongQiOption) {
+        case '0.02':
+          this.rongQiOption1 = 10
+          break
+        case '0.03':
+          this.rongQiOption1 = 25
+          break
+        case '0.05':
+          this.rongQiOption1 = 50
+          break
+        case '0.1':
+          this.rongQiOption1 = 100
+          break
+      }
+    },
+    changeRongQi1() {
+      switch (this.rongQiOption1) {
+        case '10':
+          this.step2.yunCha = BigNumber((this.rongQiOption = '0.02'))
+          break
+        case '25':
+          this.step2.yunCha = BigNumber((this.rongQiOption = '0.03'))
+          break
+        case '50':
+          this.step2.yunCha = BigNumber((this.rongQiOption = '0.05'))
+          break
+        case '100':
+          this.step2.yunCha = BigNumber((this.rongQiOption = '0.1'))
+          break
       }
     },
     setData(obj) {
