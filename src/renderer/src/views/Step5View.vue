@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="flex mt-2 mb-2 items-center w-full">
-          <span>镉的平均含量<vue-latex class="ml-2" expression="X = " /></span>
+          <span>金属元素的平均含量<vue-latex class="ml-2" expression="X = " /></span>
           <input
             v-model="contentAvg"
             class="bg-transparent p-2 border-b placeholder:text-sm"

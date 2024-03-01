@@ -62,7 +62,7 @@
             v-model="concentrationAvg"
             class="mb-1 bg-transparent p-2 border-b"
             type="text"
-            placeholder="镉的平均质量浓度"
+            placeholder="金属元素的平均质量浓度"
           />
         </div>
         <div class="flex gap-2 mt-2 mb-2 items-center">

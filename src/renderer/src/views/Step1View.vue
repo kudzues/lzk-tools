@@ -9,8 +9,8 @@
             <td>样品编号</td>
             <td>样品质量/<vue-latex expression="g" :fontsize="12" /></td>
             <td>测定吸光度</td>
-            <td>镉浓度/<vue-latex expression="(\mu g \cdot L^{-1})" :fontsize="12" /></td>
-            <td>镉含量/<vue-latex expression="(mg \cdot kg^{-1} )" :fontsize="12" /></td>
+            <td>金属元素浓度/<vue-latex expression="(\mu g \cdot L^{-1})" :fontsize="12" /></td>
+            <td>金属元素含量/<vue-latex expression="(mg \cdot kg^{-1} )" :fontsize="12" /></td>
             <td>操作</td>
           </tr>
         </thead>
@@ -62,12 +62,12 @@
           测定吸光度平均值：<span class="text-red-600">{{ measurementAvg }}</span>
         </div>
         <div>
-          镉浓度平均值：<span class="text-red-600"
+          金属元素浓度平均值：<span class="text-red-600"
             >{{ concentrationAvg }}/<vue-latex expression="(\mu g \cdot L^{-1})" :fontsize="12"
           /></span>
         </div>
         <div>
-          镉含量平均值：<span class="text-red-600"
+          金属元素含量平均值：<span class="text-red-600"
             >{{ contentAvg }}/<vue-latex expression="(mg \cdot kg^{-1} )" :fontsize="12"
           /></span>
         </div>
@@ -91,10 +91,10 @@
       <el-form-item label="测定吸光度">
         <el-input v-model="form.measurement" type="number" autocomplete="off" />
       </el-form-item>
-      <el-form-item label="镉浓度">
+      <el-form-item label="金属元素浓度">
         <el-input v-model="form.concentration" type="number" autocomplete="off" />
       </el-form-item>
-      <el-form-item label="镉含量">
+      <el-form-item label="金属元素含量">
         <el-input v-model="form.content" type="number" autocomplete="off" />
       </el-form-item>
     </el-form>

@@ -88,7 +88,7 @@
           测量重复性引入度不确定度 <vue-latex expression="u_{r}(R_{ep})" />
         </div>
         <div class="input-group">
-          <div class="label">镉含量</div>
+          <div class="label">金属元素含量</div>
           <div>
             <el-tag
               v-for="(tag, index) in dynamicTags1"
